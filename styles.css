@@ -96,6 +96,13 @@ section:last-of-type{ border-bottom:none; }
 .page-hero p{ margin-top:14px; max-width:58ch; color:var(--ink-soft); font-size:1.05rem; }
 
 /* ---------- VIDEO ---------- */
+.watch-grid{
+  display:grid; grid-template-columns:1.3fr 1fr; gap:36px; align-items:center;
+}
+.watch-grid p{ color:var(--ink-soft); font-size:1.02rem; }
+@media (max-width:760px){
+  .watch-grid{ grid-template-columns:1fr; }
+}
 .video-wrap{
   position:relative; padding-bottom:56.25%; height:0; overflow:hidden;
   border:1px solid var(--line); margin:8px 0 4px;
@@ -237,7 +244,7 @@ button[type=submit]:hover{ background:var(--pen); border-color:var(--pen); }
 .form-note{ font-size:0.8rem; color:var(--ink-soft); font-family:var(--mono); }
 
 footer{
-  padding:32px 0 48px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+  padding:64px 0 48px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
   font-family:var(--mono); font-size:0.78rem; color:var(--ink-soft);
 }
 
