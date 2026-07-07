@@ -170,8 +170,29 @@ section:last-of-type{ border-bottom:none; }
   border:1px solid var(--line); background:var(--paper-dim);
 }
 .gallery-item img{
-  width:100%; height:100%; object-fit:cover; display:block;
+  width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s;
 }
+.gallery-link{ display:block; text-decoration:none; color:inherit; }
+.gallery-link:hover .gallery-item img{ transform:scale(1.04); }
+.gallery-caption{
+  display:block; margin-top:10px; font-family:var(--mono); font-size:0.78rem;
+  color:var(--ink-soft); letter-spacing:0.03em; transition:color .15s;
+}
+.gallery-link:hover .gallery-caption{ color:var(--pen); }
+
+/* ---------- BLOG POST ---------- */
+.blog-hero-img{
+  width:100%; max-height:480px; object-fit:cover; border:1px solid var(--line);
+}
+.blog-meta{
+  font-family:var(--mono); font-size:0.8rem; color:var(--pen);
+  text-transform:uppercase; letter-spacing:0.06em; margin-bottom:10px;
+}
+.blog-back{
+  display:inline-block; margin-top:8px; font-family:var(--mono); font-size:0.8rem;
+  color:var(--ink-soft); text-decoration:none;
+}
+.blog-back:hover{ color:var(--pen); }
 .gallery-item.placeholder{
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   gap:8px; color:var(--ink-soft);
@@ -197,6 +218,10 @@ section:last-of-type{ border-bottom:none; }
 .testimonial p.quote::before{
   content:"“"; color:var(--pen); font-size:1.8rem; line-height:0;
   position:relative; top:10px; margin-right:2px;
+}
+.testimonial p.quote-cont{
+  font-family:var(--serif); font-style:italic; font-size:1.15rem; line-height:1.6;
+  color:var(--ink); margin-top:14px;
 }
 .testimonial .quote-attr{
   margin-top:16px; font-family:var(--mono); font-size:0.8rem; color:var(--ink-soft);
