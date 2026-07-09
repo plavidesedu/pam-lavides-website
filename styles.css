@@ -1,5 +1,5 @@
 :root{
-  --paper:      #F4F6F4;
+  --paper:      #FFFFFF;
   --paper-dim:  #ECEFEC;
   --ink:        #1B2A3A;
   --ink-soft:   #55636F;
@@ -109,9 +109,9 @@ section:last-of-type{ border-bottom:none; }
 
 /* ---------- VIDEO ---------- */
 .watch-grid{
-  display:grid; grid-template-columns:1.3fr 1fr; gap:36px; align-items:center;
+  display:grid; grid-template-columns:1.3fr 1fr; gap:36px; align-items:start;
 }
-.watch-grid p{ color:var(--ink-soft); font-size:1.02rem; }
+.watch-grid p{ color:var(--ink-soft); font-size:1.02rem; margin-top:4px; }
 @media (max-width:760px){
   .watch-grid{ grid-template-columns:1fr; }
 }
@@ -356,7 +356,7 @@ button[type=submit]:hover{ background:var(--pen); border-color:var(--pen); }
 .form-note{ font-size:0.8rem; color:var(--ink-soft); font-family:var(--mono); }
 
 footer{
-  padding:64px 0 48px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+  padding:96px 0 48px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
   font-family:var(--mono); font-size:0.78rem; color:var(--ink-soft);
 }
 
