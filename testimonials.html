@@ -36,7 +36,10 @@
 
   <section>
     <div class="tag">Feedback</div>
-    <div class="content" style="max-width:none;">
+    <div class="content feedback-grid" style="max-width:none;">
+
+      <div class="feedback-column">
+      <div id="testimonialList">
 
       <div class="testimonial">
         <p class="quote">I could speak fluent English when I was in high school. However, I didn't have a chance to speak English for over 10 years after I graduated. About one year ago, I had to speak English with my client but I found out that my English had already become very rusty! I was very disappointed. Since then, I have been practicing my speaking skills on AmazingTalker. One year passed and I feel more confident in speaking English now. Practice makes perfect. Pam is one of my teachers. She is almost ten years younger than me. She is fun and energetic. I enjoyed talking with her. Once she had a chance to visit my country, she gathered all her students in my country together to have a meal at a restaurant. Almost 20 people came to meet her! She definitely is a good teacher, because so many students wanted to meet her. We had an enjoyable night, and I still remember the happy atmosphere during the meal. It's hard to meet a good teacher. I'm lucky that I found mine. Good luck to all of you.</p>
@@ -68,21 +71,25 @@
 
       <!-- More testimonials coming soon — add new <div class="testimonial"> blocks above this line as they arrive -->
 
+      </div>
+
+      <div class="pagination" id="testimonialPagination" style="display:none;">
+        <button type="button" id="prevPageBtn">← Previous</button>
+        <span id="pageIndicator"></span>
+        <button type="button" id="nextPageBtn">Next →</button>
+      </div>
+
       <div class="testimonial-waiting">
         More student stories coming soon
       </div>
+      </div>
 
-    </div>
-  </section>
-
-  <section>
-    <div class="tag">Leave Feedback</div>
-    <div class="content" style="max-width:none;">
-      <h3 style="margin-top:0;">Share Your Experience</h3>
-      <p>Had a lesson with Pam? Let other students know how it went. Pick a star rating, add your name, and write a short note.</p>
-
+      <div class="feedback-column">
       <div class="feedback-box">
         <div class="feedback-success" id="feedbackSuccess">Thank you! Your feedback has been submitted.</div>
+
+        <h3 style="margin-top:0;">Leave Feedback</h3>
+        <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom:16px;">Share your experience — pick a star rating, add your name, and write a short note.</p>
 
         <form action="https://formspree.io/f/mzdlljgo" method="POST" id="feedbackForm">
           <div>
@@ -107,8 +114,41 @@
           <button type="submit">Submit feedback</button>
         </form>
       </div>
+      </div>
+
     </div>
   </section>
+
+  <script>
+    (function(){
+      const perPage = 4;
+      const list = document.getElementById('testimonialList');
+      const items = Array.from(list.getElementsByClassName('testimonial'));
+      const totalPages = Math.ceil(items.length / perPage);
+      const pagination = document.getElementById('testimonialPagination');
+      const prevBtn = document.getElementById('prevPageBtn');
+      const nextBtn = document.getElementById('nextPageBtn');
+      const indicator = document.getElementById('pageIndicator');
+      let currentPage = 1;
+
+      function render(){
+        items.forEach((item, i) => {
+          const page = Math.floor(i / perPage) + 1;
+          item.style.display = (page === currentPage) ? '' : 'none';
+        });
+        indicator.textContent = 'Page ' + currentPage + ' of ' + totalPages;
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages;
+      }
+
+      if(totalPages > 1){
+        pagination.style.display = 'flex';
+        prevBtn.addEventListener('click', () => { if(currentPage > 1){ currentPage--; render(); } });
+        nextBtn.addEventListener('click', () => { if(currentPage < totalPages){ currentPage++; render(); } });
+      }
+      render();
+    })();
+  </script>
 
 </main>
 
