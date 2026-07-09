@@ -75,6 +75,41 @@
     </div>
   </section>
 
+  <section>
+    <div class="tag">Leave Feedback</div>
+    <div class="content" style="max-width:none;">
+      <h3 style="margin-top:0;">Share Your Experience</h3>
+      <p>Had a lesson with Pam? Let other students know how it went. Pick a star rating, add your name, and write a short note.</p>
+
+      <div class="feedback-box">
+        <div class="feedback-success" id="feedbackSuccess">Thank you! Your feedback has been submitted.</div>
+
+        <form action="https://formspree.io/f/mzdlljgo" method="POST" id="feedbackForm">
+          <div>
+            <label>Your Rating</label>
+            <div class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+            </div>
+            <div class="star-rating-hint">Click a star to rate — 5 stars is the highest recommendation.</div>
+          </div>
+          <div>
+            <label for="fbName">Your Name</label>
+            <input id="fbName" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="fbMessage">Your Feedback</label>
+            <textarea id="fbMessage" name="message" required></textarea>
+          </div>
+          <button type="submit">Submit feedback</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="wrap">
