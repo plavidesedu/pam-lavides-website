@@ -224,7 +224,7 @@ section:last-of-type{ border-bottom:none; }
   padding:32px; margin-bottom:24px;
 }
 .testimonial p.quote{
-  font-family:var(--serif); font-style:italic; font-size:1.15rem; line-height:1.6;
+  font-family:var(--serif); font-style:italic; font-size:1rem; line-height:1.6;
   color:var(--ink); position:relative;
 }
 .testimonial p.quote::before{
@@ -232,7 +232,7 @@ section:last-of-type{ border-bottom:none; }
   position:relative; top:10px; margin-right:2px;
 }
 .testimonial p.quote-cont{
-  font-family:var(--serif); font-style:italic; font-size:1.15rem; line-height:1.6;
+  font-family:var(--serif); font-style:italic; font-size:1rem; line-height:1.6;
   color:var(--ink); margin-top:14px;
 }
 .testimonial .quote-attr{
@@ -272,15 +272,12 @@ section:last-of-type{ border-bottom:none; }
 
 /* ---------- FEEDBACK FORM (leave a review) ---------- */
 .feedback-grid{
-  display:grid; grid-template-columns:1.3fr 1fr; gap:40px; align-items:start;
+  display:grid; grid-template-columns:1fr; gap:32px;
 }
 .feedback-column .testimonial{ margin-bottom:20px; }
-@media (max-width:760px){
-  .feedback-grid{ grid-template-columns:1fr; }
-}
 .feedback-box{
   border:1px solid var(--line); background:var(--paper-dim);
-  padding:32px; position:sticky; top:24px;
+  padding:32px; width:100%;
 }
 .feedback-box form{ display:flex; flex-direction:column; gap:18px; }
 .feedback-box label{
