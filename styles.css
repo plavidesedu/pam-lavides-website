@@ -355,8 +355,8 @@ button[type=submit]{
 button[type=submit]:hover{ background:var(--pen); border-color:var(--pen); }
 .form-note{ font-size:0.8rem; color:var(--ink-soft); font-family:var(--mono); }
 
-footer{
-  padding:96px 0 48px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+footer.wrap{
+  padding:96px 16px 48px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
   font-family:var(--mono); font-size:0.78rem; color:var(--ink-soft);
 }
 
