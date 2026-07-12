@@ -7,7 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,6 +35,22 @@
   </section>
 
   <section>
+    <div class="tag">Referral</div>
+    <div class="content">
+      <h3 style="margin-top:0;">Refer a Friend, Earn a Free Class</h3>
+      <p>Know someone who wants to improve their English? Share your referral code with them — when they enroll, you both get a reward.</p>
+      <div class="callout">
+        <span class="callout-label">How it works</span>
+        <p>1. Message me anytime to request your personal referral code.<br>
+        2. Share it with a friend, coworker, or classmate.<br>
+        3. They enter the code in the "Referral code" field on the contact form below and book a free 25-minute trial class.<br>
+        4. Once they enroll in lessons, you get one free class added to your account.</p>
+      </div>
+      <p>There's no limit to how many friends you can refer — the more you share, the more free classes you earn.</p>
+    </div>
+  </section>
+
+  <section>
     <div class="tag">Contact</div>
     <div class="contact-grid">
       <div class="contact-info">
@@ -60,7 +75,7 @@
           </a>
         </div>
       </div>
-      <form action="https://formspree.io/f/mqevvyby" method="POST">
+      <form action="https://formspree.io/f/your-form-id" method="POST">
         <div>
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required>
@@ -73,7 +88,12 @@
           <label for="message">What are your English goals?</label>
           <textarea id="message" name="message" required></textarea>
         </div>
+        <div>
+          <label for="referral">Referral code (optional)</label>
+          <input id="referral" name="referral" type="text" placeholder="e.g. YUKI25">
+        </div>
         <button type="submit">Send message</button>
+        <p class="form-note">Connect a free Formspree account to make this form deliver to your inbox — see notes below.</p>
       </form>
     </div>
   </section>
