@@ -203,6 +203,11 @@ section:last-of-type{ border-bottom:none; }
 }
 
 .content p.table-intro{ margin-bottom:20px; }
+.pkg-title{
+  font-family:var(--serif); font-size:1.12rem; font-weight:600; color:var(--ink);
+  margin-top:32px; margin-bottom:4px;
+}
+.content p.pkg-desc{ font-size:0.95rem; margin-bottom:14px; }
 .table-wrap{ overflow-x:auto; }
 .price-table{
   width:100%; border-collapse:collapse; background:var(--paper-dim);
