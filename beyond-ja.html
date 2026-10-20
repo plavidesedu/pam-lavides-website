@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="登山、滝、山の景色——オンライン英語講師Pam Lavidesの教室の外での暮らしをご紹介します。">
+<title>教室の外で｜Pam Lavides</title>
+<link rel="alternate" hreflang="en" href="beyond-ja.html">
+<link rel="alternate" hreflang="zh-Hant" href="beyond-zh.html">
+<link rel="alternate" hreflang="ja" href="beyond-ja.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .gallery{ grid-template-columns:repeat(4, 1fr); gap:12px; }
+  @media (max-width:600px){ .gallery{ grid-template-columns:repeat(3, 1fr); gap:8px; } }
+  @media (max-width:420px){ .gallery{ grid-template-columns:repeat(2, 1fr); } }
+  .zoomable{ cursor:zoom-in; }
+  .zoomable:focus-visible{ outline:2px solid var(--pen); outline-offset:2px; }
+  .lightbox{
+    position:fixed; inset:0; z-index:1000; display:none;
+    align-items:center; justify-content:center;
+    background:rgba(15,20,28,0.92); padding:24px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{
+    max-width:100%; max-height:92vh; object-fit:contain; display:block;
+    box-shadow:0 8px 40px rgba(0,0,0,0.5);
+  }
+  .lightbox button{
+    position:absolute; background:rgba(255,255,255,0.14); color:#fff;
+    border:1px solid rgba(255,255,255,0.35); cursor:pointer;
+    font-family:var(--mono); font-size:1.3rem; line-height:1;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center;
+    transition:background .15s;
+  }
+  .lightbox button:hover{ background:rgba(255,255,255,0.3); }
+  .lightbox .lb-close{ top:18px; right:18px; }
+  .lightbox .lb-prev{ left:18px; top:50%; transform:translateY(-50%); }
+  .lightbox .lb-next{ right:18px; top:50%; transform:translateY(-50%); }
+  @media (max-width:600px){
+    .lightbox{ padding:12px; }
+    .lightbox .lb-prev, .lightbox .lb-next{ top:auto; bottom:18px; transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-inner">
+    <div class="brand">Pam Lavides<span>.</span><small>Online ESL Tutor</small></div>
+    <nav>
+      <ul>
+        <li><a href="ja.html">ホーム</a></li>
+        <li><a href="experience-ja.html">指導経歴</a></li>
+        <li><a href="courses-ja.html">コース</a></li>
+        <li><a href="pricing-ja.html">料金</a></li>
+        <li><a href="beyond-ja.html" class="active">教室の外で</a></li>
+        <li><a href="testimonials-ja.html">生徒の声</a></li>
+        <li><a href="contact-ja.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="page-hero">
+    <h1>教室の外で</h1>
+  </section>
+
+  <section>
+    <div class="tag">ライフ</div>
+    <div class="content">
+      <p>教える以外では、山登り、写真撮影、アートや映画を楽しんでいます。こうした趣味のおかげで、レッスンに創造性や実生活の話題を取り入れられます。</p>
+      <p>英語学習は、意味のある会話のように、自然で楽しいものであるべきだと思っています。生徒さんが安心して自分を表現し、自信を育てられる、リラックスして支え合える環境をつくることを目指しています。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="tag">フォト</div>
+    <div class="content" style="max-width:none;">
+      <div class="gallery" id="gallery">
+        <div class="gallery-item zoomable" tabindex="0" role="button" aria-label="Enlarge photo"><img src="images/summit-peace-sign.jpg" alt="Pam sitting on a mountain summit with arms raised" loading="lazy"></div>
+        <div class="gallery-item zoomable" tabindex="0" role="button" aria-label="Enlarge photo"><img src="images/rock-scramble.jpg" alt="Pam climbing between limestone rock formations" loading="lazy"></div>
+        <div class="gallery-item zoomable" tabindex="0" role="button" aria-label="Enlarge photo"><img src="images/mossy-falls.jpg" alt="A tall waterfall cascading down a moss-covered cliff" loading="lazy"></div>
+        <div class="gallery-item zoomable" tabindex="0" role="button" aria-label="Enlarge photo"><img src="images/falls-pool.png" alt="Pam sitting by a waterfall pool" loading="lazy"></div>
+        <div class="gallery-item zoomable" tabindex="0" role="button" aria-label="Enlarge photo"><img src="images/summit-arms-open.webp" alt="Pam with arms outstretched atop a misty summit" loading="lazy"></div>
+        <div class="gallery-item zoomable" tabindex="0" role="button" aria-label="Enlarge photo"><img src="images/cliff-edge.jpg" alt="Pam standing at the edge of a dramatic cliff overlook" loading="lazy"></div>
+        <div class="gallery-item zoomable" tabindex="0" role="button" aria-label="Enlarge photo"><img src="images/waterfall-portrait.png" alt="Pam seated on rocks in front of a lush jungle waterfall" loading="lazy"></div>
+        <div class="gallery-item zoomable" tabindex="0" role="button" aria-label="Enlarge photo"><img src="images/limestone-pose.jpg" alt="Pam smiling on a limestone cliff above a green valley" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    はじめる
+    <div class="content">
+      <div class="cta-row" style="margin-top:0;">
+        <a href="contact-ja.html" class="btn btn-solid">トライアルを予約</a>
+        <a href="pricing-ja.html" class="btn btn-outline">料金を見る</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Pam Lavides</span>
+  <span>plavides.edu@gmail.com</span>
+  <span><a href="beyond-ja.html">English</a> · <a href="beyond-zh.html">繁體中文</a></span>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Previous photo">←</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" id="lbNext" aria-label="Next photo">→</button>
+</div>
+
+<script>
+(function(){
+  var tiles = Array.prototype.slice.call(document.querySelectorAll('#gallery .zoomable'));
+  var box = document.getElementById('lightbox');
+  var big = document.getElementById('lbImg');
+  var current = 0;
+
+  function show(i){
+    current = (i + tiles.length) % tiles.length;
+    var img = tiles[current].querySelector('img');
+    big.src = img.getAttribute('src');
+    big.alt = img.getAttribute('alt');
+  }
+  function open(i){
+    show(i);
+    box.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    box.classList.remove('open');
+    document.body.style.overflow = '';
+    big.src = '';
+  }
+
+  tiles.forEach(function(t, i){
+    t.addEventListener('click', function(){ open(i); });
+    t.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(i); }
+    });
+  });
+
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); show(current - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); show(current + 1); });
+  box.addEventListener('click', function(e){ if(e.target === box) close(); });
+
+  document.addEventListener('keydown', function(e){
+    if(!box.classList.contains('open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowLeft') show(current - 1);
+    if(e.key === 'ArrowRight') show(current + 1);
+  });
+})();
+</script>
+
+</body>
+</html>

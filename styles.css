@@ -465,3 +465,12 @@ footer.wrap{
 .hero-photo{ align-self:center; }
 .referral-hero{ margin-top:32px; }
 .trust-line{ margin-top:20px; }
+
+/* ---------- COURSE DETAILS ---------- */
+.course-detail{ margin-top:14px; }
+.course-detail dt{
+  font-family:var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em;
+  color:var(--pen); margin-top:12px;
+}
+.course-detail dd{ color:var(--ink-soft); font-size:0.95rem; margin-top:2px; }
+.course-btn{ margin-top:20px; font-size:0.74rem; padding:11px 16px; }
