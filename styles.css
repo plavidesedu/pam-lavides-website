@@ -459,3 +459,9 @@ footer.wrap{
 /* Fix: give the photo its own full-width column so the box can't run under it */
 .hero-grid{ grid-template-columns:minmax(0,1fr) 300px; }
 @media (max-width:700px){ .hero-grid{ grid-template-columns:1fr; } }
+
+/* Home hero: photo beside the words again; referral box sits below both */
+.hero-grid{ align-items:center; }
+.hero-photo{ align-self:center; }
+.referral-hero{ margin-top:32px; }
+.trust-line{ margin-top:20px; }
