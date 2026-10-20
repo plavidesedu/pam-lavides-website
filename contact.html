@@ -20,7 +20,6 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="experience.html">Teaching Experience</a></li>
         <li><a href="courses.html">Courses</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
         <li><a href="beyond.html">Beyond the Classroom</a></li>
         <li><a href="testimonials.html">What My Students Say</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
@@ -45,7 +44,7 @@
           <a href="mailto:plavides.edu@gmail.com">plavides.edu@gmail.com <span class="arrow">→</span></a>
         </div>
         <div class="icon-row">
-          <a href="mailto:plavides.edu@gmail.com" class="icon-btn" aria-label="Email Pam" title="Email">
+          <a href="mailto:plavides.edu@gmail.com" class="icon-btn" id="emailBtn" aria-label="Email Pam" title="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/>
               <path d="M3.5 6.5l8.5 6 8.5-6"/>
@@ -60,8 +59,9 @@
             </svg>
           </a>
         </div>
+        <p id="copyNote" aria-live="polite" style="margin-top:12px; font-family:var(--mono); font-size:0.78rem; color:var(--pen); min-height:1.2em;"></p>
       </div>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+      <form action="https://formspree.io/f/mqevvyby" method="POST">
         <div>
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required>
@@ -75,12 +75,31 @@
           <textarea id="message" name="message" required></textarea>
         </div>
         <button type="submit">Send message</button>
-        <p class="form-note">Connect a free Formspree account to make this form deliver to your inbox — see notes below.</p>
       </form>
     </div>
   </section>
 
 </main>
+
+<script>
+(function(){
+  var btn = document.getElementById('emailBtn');
+  var note = document.getElementById('copyNote');
+  var address = 'plavides.edu@gmail.com';
+  if(!btn || !note) return;
+  btn.addEventListener('click', function(){
+    // The mail link still tries to open the visitor's mail app.
+    // As a backup, also copy the address so it can be pasted anywhere.
+    function done(){ note.textContent = 'Email address copied: ' + address; }
+    function fail(){ note.textContent = 'My email: ' + address; }
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(address).then(done, fail);
+      } else { fail(); }
+    } catch(e){ fail(); }
+  });
+})();
+</script>
 
 <footer class="wrap">
   <span>© 2026 Pam Lavides</span>
