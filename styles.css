@@ -474,3 +474,6 @@ footer.wrap{
 }
 .course-detail dd{ color:var(--ink-soft); font-size:0.95rem; margin-top:2px; }
 .course-btn{ margin-top:20px; font-size:0.74rem; padding:11px 16px; }
+
+/* Courses intro paragraph runs the full width of the course boxes */
+.page-hero.wide p{ max-width:none; }
