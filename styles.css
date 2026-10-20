@@ -445,3 +445,13 @@ footer.wrap{
   font-family:var(--mono); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft);
 }
 .trust-row li::before{ content:"✓ "; color:var(--pen); }
+
+/* ---------- HOME HERO: box lines up with bottom of photo, one-line facts ---------- */
+.hero-grid{ align-items:end; }
+.hero-photo{ align-self:end; }
+.referral-hero{ margin-top:18px; padding:22px 24px; }
+.trust-line{
+  margin-top:28px; font-family:var(--mono); font-size:0.72rem; text-transform:uppercase;
+  letter-spacing:0.04em; color:var(--ink-soft); white-space:nowrap;
+}
+@media (max-width:900px){ .trust-line{ white-space:normal; } }
