@@ -477,3 +477,14 @@ footer.wrap{
 
 /* Courses intro paragraph runs the full width of the course boxes */
 .page-hero.wide p{ max-width:none; }
+
+/* ---------- NAV: all tabs on one line ---------- */
+.nav-inner{ flex-direction:column; align-items:stretch; flex-wrap:nowrap; gap:18px; }
+.nav-inner nav{ width:100%; }
+nav ul{
+  flex-wrap:nowrap; justify-content:space-between; gap:12px;
+  font-size:0.72rem; letter-spacing:0.05em; white-space:nowrap;
+}
+@media (max-width:900px){
+  nav ul{ justify-content:flex-start; gap:18px; overflow-x:auto; padding-bottom:6px; }
+}
